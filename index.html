@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delicious Bites</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <a href="#inicio" class="nav-logo">DELICIOUS <span>BITES</span></a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Nuestra Crepa</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#resenas">Reseñas</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MENÚ MÓVIL -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#inicio" onclick="cerrarMenu()">Inicio</a>
+    <a href="#productos" onclick="cerrarMenu()">Nuestra Crepa</a>
+    <a href="#nosotros" onclick="cerrarMenu()">Nosotros</a>
+    <a href="#galeria" onclick="cerrarMenu()">Galería</a>
+    <a href="#resenas" onclick="cerrarMenu()">Reseñas</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="inicio">
+    <div class="hero-text">
+      <p class="hero-eyebrow">✦ Crepas Hechas al Momento ✦</p>
+      <h1 class="hero-title">El Sabor de la<br>Crepa <em>Recién<br>Hecha</em></h1>
+      <p class="hero-desc">"El arte de la crepa fina, elaborada al instante"
+        Un concepto donde la tradición y la calidad se encuentran.
+        Preparamos cada crepa de manera artesanal al momento,
+        logrando una masa delicada y dorada que se complementa con ingredientes seleccionados de la más alta calidad.
+        Una experiencia excepcional para su paladar.</p>
+      <div class="hero-actions">
+        <a href="#productos" class="btn-primary" onclick="irA(event, 'productos')">Ver Crepa</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-frame">
+        <img src="img/1.png" alt="Delicious Bites" style="width:100%;height:100%;object-fit:cover;">
+        <div class="hero-badge">Solo $1.75</div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- PRODUCTOS -->
+  <section id="productos">
+    <div class="section-header reveal">
+      <span class="section-tag">✦ Menú ✦</span>
+      <h2 class="section-title">Nuestra Crepa</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Una sola crepa, hecha al momento y lista para disfrutar.</p>
+    </div>
+    <div class="products-grid single" id="productsGrid">
+      <div class="product-card reveal reveal-delay-1" data-cat="crepas">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="product-img">
+              <img src="img/2.png" alt="Crepa Mixta" style="width:100%;height:100%;object-fit:cover;">
+              <span class="product-badge">Favorita</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Crepas</p>
+              <h3 class="product-name">Crepa Mixta</h3>
+              <p class="product-desc">Masa fina y dorada, preparada al momento, con un relleno mixto
+                delicioso.</p>
+              <div class="product-footer">
+                <span class="product-price">$1.75</span>
+                <span class="product-stock">Disponible hoy</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <span class="card-back-category">Crepas</span>
+            <h3 class="card-back-name">Crepa Mixta</h3>
+            <div class="card-back-divider"></div>
+            <p class="card-back-desc">Masa fina y dorada, preparada al momento, con un relleno mixto
+              delicioso.</p>
+            <span class="card-back-price">$1.75</span>
+            <button class="card-back-btn" onclick="pedirProducto()">PEDIR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SOBRE MÍ -->
+  <section id="nosotros"
+    style="padding: 6rem 5vw; background: var(--warm-white); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
+    <div class="about-visual reveal-left">
+      <div class="about-img-main">
+        <img src="img/logo.png" alt="Sobre Delicious Bites" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="about-img-accent">"Cada crepa,<br>hecha<br>al momento"</div>
+    </div>
+    <div class="about-text reveal-right">
+      <div class="section-header" style="text-align:left;">
+        <span class="section-tag">✦ Nuestra Historia ✦</span>
+        <h2 class="section-title">Sobre Delicious Bites</h2>
+        <div class="section-divider" style="margin-left:0;"></div>
+      </div>
+      <p class="about-body">Delicious Bites nació del gusto por las cosas simples bien hechas: una crepa caliente, con
+        buen relleno y a un precio justo. Cada crepa se prepara al momento, pensada con cuidado para quien la va a
+        disfrutar.</p>
+      <p class="about-body">Apostamos por un solo producto y lo hacemos muy bien: ingredientes frescos, masa recién
+        hecha y una crepa mixta que vale cada centavo de sus $1.75. Sin complicaciones, solo buen sabor.</p>
+      <div class="about-values">
+        <div class="about-value">
+          <div class="about-value-num">100%</div>
+          <div class="about-value-label">Hecha al momento</div>
+        </div>
+        <div class="about-value">
+          <div class="about-value-num">$1.75</div>
+          <div class="about-value-label">Un solo precio</div>
+        </div>
+        <div class="about-value">
+          <div class="about-value-num">∞</div>
+          <div class="about-value-label">Con amor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria">
+    <div class="section-header reveal">
+      <span class="section-tag">✦ Portafolio ✦</span>
+      <h2 class="section-title">Galería de Crepas</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle" style="color: rgba(245,239,224,0.5);">Un vistazo a nuestras crepas recién hechas.</p>
+    </div>
+    <div class="gallery-grid reveal reveal-delay-2">
+      <div class="gallery-item" data-label="El Arte De La Masa Perfecta">
+        <img src="img/13.jpeg" alt="El Arte De La Masa Perfecta" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="gallery-item" data-label="Recién hecha">
+        <img src="img/6.jpeg" alt="Recién hecha" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="gallery-item" data-label="Deliciosas frutas">
+        <img src="img/5.jpeg" alt="Deliciosas frutas" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="gallery-item" data-label="Para compartir">
+        <img src="img/8.jpeg" alt="Para compartir" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="gallery-item" data-label="Delicious Bites">
+        <img src="img/9.jpeg" alt="Delicious Bites" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEÑAS -->
+  <section id="resenas" style="background: var(--warm-white); padding: 6rem 5vw;">
+    <div class="section-header reveal">
+      <span class="section-tag">✦ Lo Que Dicen ✦</span>
+      <h2 class="section-title">Reseñas de Clientes</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Cada crepa servida con cariño, cada cliente con una sonrisa.</p>
+      <button class="btn-hacer-resena" onclick="abrirModalResena()">✦ Hacer Reseña</button>
+    </div>
+
+    <div id="resenas-grid"
+      style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+      <div id="resenas-empty"
+        style="grid-column: 1/-1; text-align:center; padding: 3rem; color: var(--sage); font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic;">
+        Aún no hay reseñas. ¡Sé el primero en compartir tu experiencia!
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL RESEÑA -->
+  <div id="modal-resena"
+    style="display:none; position:fixed; top:0; right:0; bottom:0; left:0; z-index:500; align-items:center; justify-content:center; padding: 1rem;">
+    <div class="modal-backdrop" onclick="cerrarModalResena()"></div>
+    <div class="modal-box">
+      <button class="modal-close" onclick="cerrarModalResena()">✕</button>
+      <h3 class="modal-titulo">Dejá tu Reseña</h3>
+      <div class="modal-divider"></div>
+
+      <div class="form-group" style="margin-bottom:1rem;">
+        <label class="form-label">Nombre</label>
+        <input type="text" id="r-nombre" class="form-input" placeholder="Tu nombre">
+        <span id="r-error-nombre"
+          style="display:none; color:#c0392b; font-size:0.72rem; margin-top:0.3rem; font-family:'Jost',sans-serif;">Por
+          favor completá este campo</span>
+      </div>
+
+      <div class="form-group" style="margin-bottom:1rem;">
+        <label class="form-label">Producto</label>
+        <select id="r-producto" class="form-input" style="cursor:pointer;">
+          <option value="Crepa Mixta — $1.75">Crepa Mixta — $1.75</option>
+        </select>
+        <span id="r-error-producto"
+          style="display:none; color:#c0392b; font-size:0.72rem; margin-top:0.3rem; font-family:'Jost',sans-serif;">Por
+          favor seleccioná un producto</span>
+      </div>
+
+      <div class="form-group" style="margin-bottom:1rem;">
+        <label class="form-label">Calificación</label>
+        <div class="estrellas-selector" id="estrellas-selector">
+          <span class="estrella" data-val="1" onclick="seleccionarEstrellas(1)">★</span>
+          <span class="estrella" data-val="2" onclick="seleccionarEstrellas(2)">★</span>
+          <span class="estrella" data-val="3" onclick="seleccionarEstrellas(3)">★</span>
+          <span class="estrella" data-val="4" onclick="seleccionarEstrellas(4)">★</span>
+          <span class="estrella" data-val="5" onclick="seleccionarEstrellas(5)">★</span>
+        </div>
+        <span id="r-error-estrellas"
+          style="display:none; color:#c0392b; font-size:0.72rem; margin-top:0.3rem; font-family:'Jost',sans-serif;">Por
+          favor seleccioná una calificación</span>
+      </div>
+
+      <div class="form-group" style="margin-bottom:1.5rem;">
+        <label class="form-label">Tu Reseña</label>
+        <textarea id="r-texto" class="form-textarea" placeholder="Contanos tu experiencia con la crepa..."></textarea>
+        <span id="r-error-texto"
+          style="display:none; color:#c0392b; font-size:0.72rem; margin-top:0.3rem; font-family:'Jost',sans-serif;">Por
+          favor escribí tu reseña</span>
+      </div>
+
+      <button class="btn-primary" onclick="publicarResena()" style="width:100%; padding:1rem; font-size:0.75rem;">✦
+        Publicar Reseña</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <div class="footer-brand">DELICIOUS <span>BITES</span></div>
+      <p class="footer-desc">Crepas mixtas preparadas al momento con ingredientes frescos. Un solo sabor, hecho con amor
+        y dedicación.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/magicwool22" target="_blank" class="social-btn">📸</a>
+        <a href="#" class="social-btn">👍</a>
+        <a href="#" class="social-btn" onclick="abrirWhatsApp(event)" aria-label="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Nuestra Crepa</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#galeria">Galería</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Información</h4>
+      <ul>
+        <li><a href="#">Pedidos personalizados</a></li>
+        <li><a href="#">Entregas y retiro en el día</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Política de cambios</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">© 2026 Delicious Bites — Crepas Mixtas. Hecho con amor 🥞</div>
+  <!-- WHATSAPP FLOTANTE -->
+  <div class="wa-widget" id="waWidget">
+    <div class="wa-panel" id="waPanel" role="dialog" aria-label="Escribinos por WhatsApp" aria-hidden="true">
+      <div class="wa-header">
+        <div class="wa-avatar">DB</div>
+        <div class="wa-header-text">
+          <p class="wa-name">Delicious Bites</p>
+          <p class="wa-status">Responde por WhatsApp</p>
+        </div>
+        <button class="wa-close" onclick="cerrarWhatsApp()" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="wa-body">
+        <div class="wa-msg">¡Hola! 👋 ¿Qué te gustaría pedir? Escribe tu mensaje y te respondemos por WhatsApp.</div>
+      </div>
+      <div class="wa-footer">
+        <textarea id="wa-texto" class="wa-input" rows="2" placeholder="Escribe tu mensaje..."></textarea>
+        <button class="wa-send" onclick="enviarWhatsApp()">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
+          </svg>
+          Enviar por WhatsApp
+        </button>
+      </div>
+    </div>
+    <button class="wa-fab" id="waFab" onclick="toggleWhatsApp()" aria-label="Abrir chat de WhatsApp">
+      <svg viewBox="0 0 32 32" width="32" height="32" fill="currentColor" aria-hidden="true">
+        <path
+          d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.01L4 28l7.15-1.87a12 12 0 0 0 4.89 1.04C22.68 27.17 28 21.77 28 15.13 28 8.4 22.68 3 16.04 3zm0 21.97c-1.77 0-3.5-.48-5.01-1.38l-.36-.21-3.72.97.99-3.62-.24-.37a9.9 9.9 0 0 1-1.52-5.32c0-5.5 4.48-9.98 9.99-9.98 5.5 0 9.96 4.48 9.96 9.98 0 5.5-4.46 9.93-9.96 9.93zm5.47-7.46c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z" />
+      </svg>
+    </button>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
